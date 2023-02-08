@@ -1,0 +1,41 @@
+@use 'sass:math';
+
+$vw-viewport: 1920;
+$vw-viewport-mobile: 375;
+@function width($font, $type: 'web' or 'mobile') {
+  @if $type == 'mobile' {
+    $vw-context: $vw-viewport-mobile * 0.01 * 1px;
+    @return $font * 1px / $vw-context * 1vw;
+  } @else {
+    $vw-context: $vw-viewport * 0.01 * 1px;
+    @return $font * 1px / $vw-context * 1vw;
+  }
+}
+
+$mobile-width: 768.5px;
+$tablet-width: 992px;
+$header-height: width(64);
+$header-height-mobile: 60px;
+$color-main: #fff;
+$secondary-color: #bdc5cb;
+$background-color: #131a20;
+$light_black_1: #bdc5cb;
+$main: #0e7ee4;
+$sub_color: #f5f5f5;
+
+.view {
+  width: 100vw;
+  flex-grow: 1;
+  max-width: 100%;
+  &.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &.inline {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
