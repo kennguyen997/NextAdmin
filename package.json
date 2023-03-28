@@ -62,6 +62,9 @@
       "pre-commit": "lint-staged"
     }
   },
+  "engines": {
+    "node": ">=16.14.0 <=16.17.0"
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "npm run lint:fix",

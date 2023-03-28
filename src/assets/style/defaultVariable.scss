@@ -5,16 +5,16 @@ $vw-viewport-mobile: 375;
 @function width($font, $type: 'web' or 'mobile') {
   @if $type == 'mobile' {
     $vw-context: $vw-viewport-mobile * 0.01 * 1px;
-    @return $font * 1px / $vw-context * 1vw;
+    @return calc($font * 1px / $vw-context * 1vw);
   } @else {
     $vw-context: $vw-viewport * 0.01 * 1px;
-    @return $font * 1px / $vw-context * 1vw;
+    @return calc($font * 1px / $vw-context * 1vw);
   }
 }
 
 $mobile-width: 768.5px;
 $tablet-width: 992px;
-$header-height: width(64);
+$header-height: 64px;// width(64);
 $header-height-mobile: 60px;
 $color-main: #fff;
 $secondary-color: #bdc5cb;

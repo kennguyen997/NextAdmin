@@ -200,36 +200,16 @@ ul {
     position: sticky;
     left: 0;
     top: 0;
-    width: width(200) !important;
-    max-width: width(200) !important;
-    min-width: width(200) !important;
-    &.ant-layout-sider-collapsed {
-      width: width(80) !important;
-      max-width: width(80) !important;
-      min-width: width(80) !important;
-      .ant-layout-sider-trigger {
-        width: width(80) !important;
-      }
-    }
     .ant-layout-sider-children {
       display: flex;
       flex-direction: column;
       .logo {
-        height: $header-height - width(16) * 2;
-        margin: width(16);
+        height: $header-height - 16px * 2;
+        margin: 16px;
       }
       .ant-menu {
         flex-grow: 1;
         overflow-y: auto;
-      }
-    }
-    .ant-layout-sider-trigger {
-      width: width(200) !important;
-      line-height: width(48);
-      height: width(48);
-      svg {
-        width: width(14);
-        height: width(14);
       }
     }
   }

@@ -32,12 +32,12 @@ const items: MenuItem[] = [
   getItem('Option 1', '1', <PieChartOutlined />),
   getItem('Option 2', '2', <DesktopOutlined />),
   getItem('User', 'sub1', <UserOutlined />, [
-    getItem('Tom', '3'),
-    getItem('Bill', '4'),
-    getItem('Alex', '5'),
+    getItem('Tom', '3', <></>, [getItem('Bill', '4'), getItem('Bill', '5')]),
+    getItem('Bill', '6'),
+    getItem('Alex', '7'),
   ]),
-  getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-  getItem('Files', '9', <FileOutlined />),
+  getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '8'), getItem('Team 2', '9')]),
+  getItem('Files', '10', <FileOutlined />),
 ];
 
 const App: React.FC = () => {
@@ -49,7 +49,7 @@ const App: React.FC = () => {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-        <div className="logo" style={{ background: 'rgba(255, 255, 255, 0.2)' }} />
+        <div className="logo" />
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
       </Sider>
       <Layout className="site-layout">

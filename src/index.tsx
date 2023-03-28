@@ -4,11 +4,20 @@ import 'antd/dist/reset.css';
 import './assets/style/index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ConfigProvider } from 'antd';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <ConfigProvider
+      theme={{
+        token: {
+          fontFamily: 'Noto Sans KR',
+        },
+      }}
+    >
+      <App />
+    </ConfigProvider>
   </React.StrictMode>,
 );
 
